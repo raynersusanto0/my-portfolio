@@ -33,4 +33,15 @@ async function showGreeting() {
   
     const dateContainer = document.getElementById('test');
     dateContainer.innerText = textFromResponse;
+}
+
+async function getQuote() {
+    const responseFromServer = await fetch('/step-3');
+    // The json() function returns an object that contains fields that we can
+    // reference to create HTML.
+    const quote = await responseFromServer.json();
+
+    console.log(quote)
+    const statsListElement = document.getElementById('quotes-container');
+    statsListElement.innerHTML = '<h1>' + quote.Quote + '</h1>';
   }

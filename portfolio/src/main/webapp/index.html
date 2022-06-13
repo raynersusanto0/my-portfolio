@@ -13,9 +13,20 @@
     <script src="script.js"></script>
   </head>
   <body>
+    <!-- Div for the random quote -->
+    <div id="content">
+        <h1>Server Stats</h1>
+        <p>Click here to add a random quote to your page:</p>
+        <button onclick="getQuote()">Fetch Quote!</button>
+        <ul id="quotes-container"></ul>
+        <p>Click <a href="/step-3">here</a> to see the server response directly.</p>
+    </div>
+
     <div id="content">
       <h1>Hello There It's Rayner</h1>
       <p>This is my portfolio.</p>
+
+      <!-- Week 2 starts here -->
       <p>Click <a href="/hello">here</a> to see content created by server code.</p>
       <p>Click here to get a random message:</p>
 
@@ -39,7 +50,7 @@
             <div class="col">
 
             </div>
-            <div class="col-6"" id="intro">
+            <div class="col-6" id="intro">
                 <h2> A Bit About Myself</h2>
                 <p> My name is Rayner Susanto. I'm a student from the University of Colorado. I am currently pursuing a degree in Computer Science. Some fun things about me, I enjoy a good basketball game and I am waiting for the NBA Finals to finish. Been a Golden State Warrior fan since the start of their dynasty and hoping they win this year!</p>
                 <img src="Images/IMG_9264.JPG"  width="400" height="500">
@@ -74,6 +85,19 @@
             </div>
             <div class="col"></div>
         </div>
+    </div>
+
+    <div class="container">
+        <div class="row"></div>
+        <div class="row">
+            <form action="/form-handler" method="POST">
+                <p>Enter some text here:</p>
+                <textarea name="text-input">hello world</textarea>
+                <br/>
+                <input type="submit" />
+            </form>
+        </div>
+        <div class="row"></div>
     </div>
     
     <!-- Bootstrap Javascript -->
