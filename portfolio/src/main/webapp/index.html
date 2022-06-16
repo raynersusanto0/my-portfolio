@@ -1,19 +1,124 @@
 <!DOCTYPE html>
 <html>
   <head>
+      <!-- Required Metadata for Bootstrap -->
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
     <script src="script.js"></script>
   </head>
   <body>
+    <!-- Create new edited website -->
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Hello World</h1>
+        </div>
+    </div>
+
+    <!-- Div for the random quote -->
     <div id="content">
-      <h1>My Portfolio</h1>
+        <h1>Server Stats</h1>
+        <p>Click here to add a random quote to your page:</p>
+        <button onclick="getQuote()">Fetch Quote!</button>
+        <ul id="quotes-container"></ul>
+        <p>Click <a href="/step-3">here</a> to see the server response directly.</p>
+    </div>
+
+    <div id="content">
+      <h1>Hello There It's Rayner</h1>
       <p>This is my portfolio.</p>
+
+      <!-- Week 2 starts here -->
       <p>Click <a href="/hello">here</a> to see content created by server code.</p>
       <p>Click here to get a random message:</p>
+
+      <p>
+          <button onclick="showGreeting();">
+            Get Greeting
+          </button>
+      </p>
+      <p id="test">Change me</p>
+      
+      <p>Click <a href="/hello">here</a> to see the server response directly.</p>
+      <div id="greeting-container">
+
+      </div>
       <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
     </div>
+    <br>
+    <br>
+    <div class ="container">
+        <div class="row">
+            <div class="col">
+
+            </div>
+            <div class="col-6" id="intro">
+                <h2> A Bit About Myself</h2>
+                <p> My name is Rayner Susanto. I'm a student from the University of Colorado. I am currently pursuing a degree in Computer Science. Some fun things about me, I enjoy a good basketball game and I am waiting for the NBA Finals to finish. Been a Golden State Warrior fan since the start of their dynasty and hoping they win this year!</p>
+                <img src="Images/IMG_9264.JPG"  width="400" height="500">
+              </div>
+              <div class="col">
+
+              </div>
+        </div>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col">
+                <div id="Gallery">
+                    <h2>Memorable Moments</h2>
+                    <table id="Pictures">
+                        <tr>
+                            <td><img src="Images/IMG_9295.JPG" width="250" height="200" alt=""></td>
+                            <td><img src="Images/IMG_9290 2.JPG" width="250" height="200" alt=""></td>
+                            <td><img src="Images/IMG_9210.JPG" width="250" height="200" alt=""></td>
+                        </tr>
+                        <tr>
+                            <td><img src="Images/IMG_8426.JPG" width="250" height="200" alt=""></td>
+                            <td><img src="Images/IMG_9162.JPG" width="250" height="200" alt=""></td>
+                            <td><img src="Images/IMG_9303.JPG" width="250" height="200" alt=""></td>
+                        </tr>
+                      </table>
+                      <div class="text">
+                        <p>
+                            I've been really interested in working with scenic photography. Always had a knick to find really great views and I want to share what I see to a lot of people back home. Colorado is a beautiful state and these are some of the pictures I took last winter around my University.
+                        </p>
+                    </div>
+                  </div>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-9">
+                <form action="/form-handler" method="POST">
+
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+                    </div>
+                
+                    <br>
+                    
+                    <button type="submit" class="btn btn-primary">Submit</button>   
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bootstrap Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
   </body>
 </html>

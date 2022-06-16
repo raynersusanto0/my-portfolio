@@ -26,3 +26,22 @@ function addRandomGreeting() {
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
+
+async function showGreeting() {
+    const responseFromServer = await fetch('/hello');
+    const textFromResponse = await responseFromServer.text();
+  
+    const dateContainer = document.getElementById('test');
+    dateContainer.innerText = textFromResponse;
+}
+
+async function getQuote() {
+    const responseFromServer = await fetch('/step-3');
+    // The json() function returns an object that contains fields that we can
+    // reference to create HTML.
+    const quote = await responseFromServer.json();
+
+    console.log(quote)
+    const statsListElement = document.getElementById('quotes-container');
+    statsListElement.innerHTML = '<h1>' + quote.Quote + '</h1>';
+  }
